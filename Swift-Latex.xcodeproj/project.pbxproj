@@ -18,6 +18,7 @@
 		9F9051712575B2DD008982F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F90516F2575B2DD008982F5 /* LaunchScreen.storyboard */; };
 		9F90517C2575B2DD008982F5 /* Swift_LatexExamplesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F90517B2575B2DD008982F5 /* Swift_LatexExamplesTests.swift */; };
 		9F9051872575B2DE008982F5 /* Swift_LatexExamplesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9051862575B2DE008982F5 /* Swift_LatexExamplesUITests.swift */; };
+		9F9051982575B461008982F5 /* LatexParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9051972575B461008982F5 /* LatexParser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,8 @@
 		9F9051822575B2DE008982F5 /* Swift-LatexExamplesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Swift-LatexExamplesUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F9051862575B2DE008982F5 /* Swift_LatexExamplesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swift_LatexExamplesUITests.swift; sourceTree = "<group>"; };
 		9F9051882575B2DE008982F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F9051972575B461008982F5 /* LatexParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatexParser.swift; sourceTree = "<group>"; };
+		9F9051A32575BDF3008982F5 /* Swift-Latex.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Swift-Latex.podspec"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +113,7 @@
 		9F9051362575B1E4008982F5 = {
 			isa = PBXGroup;
 			children = (
+				9F9051A32575BDF3008982F5 /* Swift-Latex.podspec */,
 				9F9051422575B1E4008982F5 /* Swift-Latex */,
 				9F90514D2575B1E4008982F5 /* Swift-LatexTests */,
 				9F9051632575B2D9008982F5 /* Swift-LatexExamples */,
@@ -135,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				9F9051432575B1E4008982F5 /* Swift_Latex.h */,
+				9F9051972575B461008982F5 /* LatexParser.swift */,
 				9F9051442575B1E4008982F5 /* Info.plist */,
 			);
 			path = "Swift-Latex";
@@ -295,6 +300,7 @@
 				TargetAttributes = {
 					9F90513F2575B1E4008982F5 = {
 						CreatedOnToolsVersion = 12.2;
+						LastSwiftMigration = 1220;
 					};
 					9F9051482575B1E4008982F5 = {
 						CreatedOnToolsVersion = 12.2;
@@ -380,6 +386,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F9051982575B461008982F5 /* LatexParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -582,6 +589,7 @@
 		9F9051552575B1E4008982F5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = B9U9A77UGF;
@@ -595,9 +603,11 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.dcc.Swift-Latex";
+				MARKETING_VERSION = 0.0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dcc.swift.latex;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -606,6 +616,7 @@
 		9F9051562575B1E4008982F5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = B9U9A77UGF;
@@ -619,7 +630,8 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.dcc.Swift-Latex";
+				MARKETING_VERSION = 0.0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dcc.swift.latex;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -630,6 +642,7 @@
 		9F9051582575B1E4008982F5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B9U9A77UGF;
 				INFOPLIST_FILE = "Swift-LatexTests/Info.plist";
@@ -648,6 +661,7 @@
 		9F9051592575B1E4008982F5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B9U9A77UGF;
 				INFOPLIST_FILE = "Swift-LatexTests/Info.plist";
