@@ -10,7 +10,7 @@ Pod::Spec.new do |spec|
   spec.license      = { :type => "MIT", :file => "LICENSE" }
   spec.author       = { "Douglas Cobb" => "douglas.g.cobb@gmail.com" }
 
-  spec.ios.deployment_target = "12.1"
+  spec.ios.deployment_target = "14.0"
   spec.swift_version = "5.0"
 
   spec.source        = { :git => "https://github.com/DouglasCobb/Swift-Latex.git", :tag => "#{spec.version}" }
